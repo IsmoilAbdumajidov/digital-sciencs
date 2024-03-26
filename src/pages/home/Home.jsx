@@ -8,11 +8,13 @@ import arxi from "../../../logo kafedras/Arxitektura.jpg"
 import bugal from "../../../logo kafedras/bugalter.jpg"
 import energ from "../../../logo kafedras/ENERGETIKA.jpg"
 import Header from '../../components/home/Header'
+import ApexChart from '../../components/chart/ApexChart'
 
 const Home = () => {
     return (
         <div>
             <Header />
+            <ApexChart/>
             <div>
                 <div className='my-20 text-center relative w-full md:w-[600px] m-auto'>
                     <div className='absolute w-36 h-1 -top-5 left-[50%] -translate-x-[50%] bg-[#0f95ee]'></div>
