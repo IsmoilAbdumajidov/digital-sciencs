@@ -65,7 +65,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .main-container {
     max-width: 1400px;
-    margin: auto auto;
+    margin-inline:auto;
 }
 
 
@@ -79,7 +79,10 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     input, select, textarea {
-        @apply bg-gray-50 border p-2 w-full rounded-md py-3 focus:outline-[#0f95ee]
+        @apply bg-gray-50 border p-2 w-full rounded-md focus:outline-[#0f95ee]
+    }
+    ::placeholder{
+        @apply text-black text-sm font-light
     }
 }
 
@@ -100,6 +103,7 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-background-clip: text;
 
 }
+
 
 .bg:hover {
     background-position: 100% 0;

@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify'
 import PageNotFound from './pages/pageNotFound/PageNotFound'
 import Home from './pages/home/Home'
 import Navbar from './components/navbar/Navbar'
+import Kafedra from './pages/kafedra/Kafedra'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/:nameKafedra' element={<Kafedra />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </div>

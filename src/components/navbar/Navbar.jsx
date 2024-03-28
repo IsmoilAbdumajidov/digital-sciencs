@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className='border-b border-white/60 bg-white/50 fixed w-full top-0 left-0 z-30 backdrop-blur-md'>
             <nav className={`flex flex-col lg:flex-row justify-centerlgd:items-center lg:justify-between main-container w-full py-3  `}>
                 <div className=' flex w-full py-3  lg:w-auto justify-between items-center'>
-                    <h1 className='text-bg text-4xl font-bold'>HLB</h1>
+                    <Link to={'/'} className='text-bg text-4xl font-bold'>HLB</Link>
                     <button onClick={() => setIsOpen(!isOpen)} className='lg:hidden bg p-2 px-3 rounded-md text-white'>
 
                         {

@@ -22,11 +22,11 @@ const Home = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deserunt ab vitae velit. Beatae, consequatur ab in quasi non minima!</p>
                 </div>
                 <div className="grid main-container grid-cols-1 sm:grid-cols-2 gap-7 lg:grid-cols-3 mt-10 xl:grid-cols-4">
-                    <CourseCard logo={att} title={"Axborot tizimlari va texnologiyalari"} path="/" type="allCourse" />
-                    <CourseCard logo={biq} title={"Bino inshoatlar qurulishi"} path="/" type="allCourse" />
-                    <CourseCard logo={fizik} title={"Fizika kafedrasi"} path="/" type="allCourse" />
-                    <CourseCard logo={chet} title={"Chettillari kafedrasi"} path="/" type="allCourse" />
-                    <CourseCard logo={arxi} title={"Arxitektura kafedrasi"} path="/" type="allCourse" />
+                    <CourseCard logo={att} title={"Axborot tizimlari va texnologiyalari"} path="/att" type="allCourse" />
+                    <CourseCard logo={biq} title={"Bino inshoatlar qurulishi"} path="/biq" type="allCourse" />
+                    <CourseCard logo={fizik} title={"Fizika kafedrasi"} path="/fizik" type="allCourse" />
+                    <CourseCard logo={chet} title={"Chettillari kafedrasi"} path="/chet" type="allCourse" />
+                    <CourseCard logo={arxi} title={"Arxitektura kafedrasi"} path="arxi/" type="allCourse" />
                     <CourseCard logo={bugal} title={"Bugalteriya hisobi va Audit kafedrasi"} path="/" type="allCourse" />
                     <CourseCard logo={energ} title={"Energetika kafedrasi"} path="/" type="allCourse" />
                 </div>
