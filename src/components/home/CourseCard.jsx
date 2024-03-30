@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import ProgressBar from '../progressBar/ProgressBar';
 
-const CourseCard = ({ title,logo, path }) => {
+const CourseCard = ({ title, logo, path }) => {
   const navigate = useNavigate()
   return (
     <Card className="w-full mt-5 bg-[#f8f9f9]">
@@ -20,7 +20,7 @@ const CourseCard = ({ title,logo, path }) => {
           />
         </CardHeader>
       </div>
-      <CardBody className='px-3 pt-3 pb-0'>
+      <CardBody className='px-3 pt-3 pb-0 text-center'>
         <Typography color="blue-gray">
           <span className='text-md'>{title}</span>
         </Typography>
