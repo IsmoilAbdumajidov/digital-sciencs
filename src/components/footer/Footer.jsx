@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
     const year = new Date().getFullYear()
     return (
-        <div className='bg-white border-t-2 border-blue-500 mt-20'>
+        <div id='footer' className='bg-white border-t-2 border-blue-500 mt-20'>
             <div className="main-container text-[14px] py-14  xl:gap-32 gap-5 grid grid-cols-1 lg:grid-cols-3 ">
                 <div className='flex flex-col justify-between col-span-1'>
                     <Link to={'/'} className='w-[200px] flex items-center gap-3'>
