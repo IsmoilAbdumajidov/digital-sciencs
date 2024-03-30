@@ -39,7 +39,7 @@ const Home = () => {
         <div>
             <Header />
             <ApexChart />
-            <div>
+            <div id='kafedralar'>
                 <div className='my-20 text-center relative w-full md:w-[600px] m-auto'>
                     <div className='absolute w-36 h-1 -top-5 left-[50%] -translate-x-[50%] bg-[#0f95ee]'></div>
                     <h1 className='text-bg text-3xl pb-5 sm:text-4xl md:text-5xl font-semibold '>Kafedralar</h1>

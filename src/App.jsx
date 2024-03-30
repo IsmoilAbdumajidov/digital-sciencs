@@ -5,6 +5,7 @@ import PageNotFound from './pages/pageNotFound/PageNotFound'
 import Home from './pages/home/Home'
 import Navbar from './components/navbar/Navbar'
 import Kafedra from './pages/kafedra/Kafedra'
+import Footer from './components/footer/Footer'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/:nameKafedra' element={<Kafedra />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
+        <Footer />
     </div>
   )
 }

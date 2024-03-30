@@ -74,7 +74,7 @@ function ApexChart() {
     };
 
     return (
-        <div className='main-container'>
+        <div id='statistic' className='main-container'>
             <div className='my-20 text-center relative w-full md:w-[600px] m-auto'>
                 <div className='absolute w-36 h-1 -top-5 left-[50%] -translate-x-[50%] bg-[#0f95ee]'></div>
                 <h1 className='text-bg text-3xl pb-5 sm:text-4xl md:text-5xl font-semibold '>Statistika</h1>
