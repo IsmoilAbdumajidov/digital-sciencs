@@ -33,8 +33,12 @@ import tarnsport from "../../../logo kafedras/TRANSPORT.jpg"
 import ym from "../../../logo kafedras/YM.jpg"
 import qmb from "../../../logo kafedras/QMB.jpg"
 import ktk from "../../../logo kafedras/KTK.jpg"
+import { getKafedra } from '../../hooks/GetKafedraData'
+import { url } from '../../api/axios'
 
 const Home = () => {
+    const { data } = getKafedra()
+    console.log(data);
     return (
         <div>
             <Header />
@@ -46,6 +50,11 @@ const Home = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deserunt ab vitae velit. Beatae, consequatur ab in quasi non minima!</p>
                 </div>
                 <div className="grid main-container grid-cols-1 sm:grid-cols-2 gap-7 lg:grid-cols-3 mt-10 xl:grid-cols-4">
+                    {data?.map((item, i) => (
+                        <CourseCard key={i} logo={url + item.icon} title={item.name} path={item.id} type="allCourse" />
+                    ))}
+                </div>
+                {/* <div className="grid main-container grid-cols-1 sm:grid-cols-2 gap-7 lg:grid-cols-3 mt-10 xl:grid-cols-4">
                     <CourseCard logo={att} title={"Axborot tizimlari va texnologiyalari kafedrasi"} path="/axborot-tizimlari-va-texnologiyalari-kafedrasi" type="allCourse" />
                     <CourseCard logo={biq} title={"Bino inshoatlar qurulishi kafedrasi"} path="/bino-inshoatlar-qurulishi-kafedrasi" type="allCourse" />
                     <CourseCard logo={fizik} title={"Fizika kafedrasi"} path="/fizika-kafedrasi" type="allCourse" />
@@ -77,7 +86,7 @@ const Home = () => {
                     <CourseCard logo={ym} title={"Yo'l muhandisligi kafedrasi"} path="/yol-muhandisligi-kafedrasi" type="allCourse" />
                     <CourseCard logo={qmb} title={"Qurilish materiallari va buyumlari kafedrasi"} path="/qurilish-materiallari-va-buyumlari-kafedrasi" type="allCourse" />
                     <CourseCard logo={ktk} title={"Kimyoviy texnologiya kafedrasi"} path="/kimyoviy-texnologiya-kafedrasi" type="allCourse" />
-                </div>
+                </div> */}
             </div>
         </div>
     )

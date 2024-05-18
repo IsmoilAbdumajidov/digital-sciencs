@@ -27,7 +27,7 @@ const CourseCard = ({ title, logo, path }) => {
         {/* <ProgressBar bar={10} /> */}
       </CardBody>
       <CardFooter className="px-3 pt-0 pb-3 mt-auto">
-        <button onClick={() => navigate(`${path}`)} className='bg py-2 mt-3 w-full rounded-lg text-white'>Kirish</button>
+        <button onClick={() => navigate(`/kafedra/${path}`)} className='bg py-2 mt-3 w-full rounded-lg text-white'>Kirish</button>
       </CardFooter>
     </Card>
   )

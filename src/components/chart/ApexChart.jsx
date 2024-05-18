@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import { getStatsistic } from '../../hooks/GetKafedraData';
 
 function ApexChart() {
+    const { data } = getStatsistic()
+    console.log(data);
     const series = [{
         name: 'Servings',
-        data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 100, 65, 35]
+        data: data?.data?.counts
+        // data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 100, 65, 35]
     }];
 
     const options = {
@@ -48,9 +52,10 @@ function ApexChart() {
             labels: {
                 rotate: -45
             },
-            categories: ['Buxgalteriya hisobi va audit kafedrasi', 'Energiya tejamkorligi va muqobil energiya manbalari kafedrasi', 'QISHLOQ XO‘JALIGINI MEXANIZATSIYALASHTIRISH KAFEDRASI', 'FOYDALI QAZILMALAR VA QAYTA ISHLASH TEXNOLOGIYALARI KAFEDRASI', 'Arxitektura', 'MUHANDISLIK VA KOMPYUTER GRAFIKASI KAFEDRASI',
-                'METROLOGIYA VA STANDARTLASHTIRISH KAFEDRASI', 'YO‘L HARAKATI XAVFSIZLIGI KAFEDRASI', 'AXBOROT TIZIMLARI VA TEXNOLOGIYALARI KAFEDRASI', 'CHET TILLAR KAFEDRASI', 'JISMONIY TARBIYA VA SPORT KAFEDRASI', 'IQTISODIYOT KAFEDRASI', 'MASHINASOZLIK TEXNOLOGIYASI KAFEDRASI'
-            ],
+            categories: data?.data?.department,
+            // categories: ['Buxgalteriya hisobi va audit kafedrasi', 'Energiya tejamkorligi va muqobil energiya manbalari kafedrasi', 'QISHLOQ XO‘JALIGINI MEXANIZATSIYALASHTIRISH KAFEDRASI', 'FOYDALI QAZILMALAR VA QAYTA ISHLASH TEXNOLOGIYALARI KAFEDRASI', 'Arxitektura', 'MUHANDISLIK VA KOMPYUTER GRAFIKASI KAFEDRASI',
+            //     'METROLOGIYA VA STANDARTLASHTIRISH KAFEDRASI', 'YO‘L HARAKATI XAVFSIZLIGI KAFEDRASI', 'AXBOROT TIZIMLARI VA TEXNOLOGIYALARI KAFEDRASI', 'CHET TILLAR KAFEDRASI', 'JISMONIY TARBIYA VA SPORT KAFEDRASI', 'IQTISODIYOT KAFEDRASI', 'MASHINASOZLIK TEXNOLOGIYASI KAFEDRASI'
+            // ],
             tickPlacement: 'on'
         },
         // yaxis: {

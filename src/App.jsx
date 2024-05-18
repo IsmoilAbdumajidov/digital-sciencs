@@ -25,10 +25,10 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/:nameKafedra' element={<Kafedra />} />
+        <Route path='/kafedra/:nameKafedra' element={<Kafedra />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
-        <Footer />
+      <Footer />
     </div>
   )
 }
