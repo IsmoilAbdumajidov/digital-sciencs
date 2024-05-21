@@ -4,8 +4,8 @@ import { clearLS, getFromLS } from "../utils/localStorage";
 export const url = "http://192.168.10.100:8000/storage/"
 
 export const instance = axios.create({
-    // baseURL: "https://digitalscience.nammqi.uz/api/",
-    baseURL: "http://192.168.10.100:8000/api/",
+    baseURL: "https://digitalscience.nammqi.uz/api/",
+    // baseURL: "http://192.168.10.100:8000/api/",
     // headers: {
     //     "Content-Type": "application/json",
     // },
