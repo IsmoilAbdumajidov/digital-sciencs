@@ -1,7 +1,7 @@
 import axios from "axios";
 import { clearLS, getFromLS } from "../utils/localStorage";
 
-export const url = "http://192.168.10.100:8000/storage/"
+export const url = "https://digitalscience.nammqi.uz/storage/"
 
 export const instance = axios.create({
     baseURL: "https://digitalscience.nammqi.uz/api/",
