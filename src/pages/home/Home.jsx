@@ -2,45 +2,16 @@ import React from 'react'
 import Header from '../../components/home/Header'
 import ApexChart from '../../components/chart/ApexChart'
 import CourseCard from '../../components/home/CourseCard'
-import att from "../../../logo kafedras/ATT.jpg"
-import biq from "../../../logo kafedras/BIQ.jpg"
-import fizik from "../../../logo kafedras/FIZIKA.jpg"
-import chet from "../../../logo kafedras/CHET.jpg"
-import arxi from "../../../logo kafedras/Arxitektura.jpg"
-import bugal from "../../../logo kafedras/bugalter.jpg"
-import energiya from "../../../logo kafedras/energiya.jpg"
-import qxm from "../../../logo kafedras/QXM.jpg"
-import foydali from "../../../logo kafedras/foydali qazilma.jpg"
-import mkgk from "../../../logo kafedras/MKG.jpg"
-import yhx from "../../../logo kafedras/YHX.jpg"
-import uzbektili from "../../../logo kafedras/UZBEK TILI.jpg"
-import trlog from "../../../logo kafedras/TRANSPORTLOGOSTIKA.jpg"
-import matem from "../../../logo kafedras/MATEMATIKA.jpg"
-import mq from "../../../logo kafedras/MQ.jpg"
-import ttat from "../../../logo kafedras/TTAT.jpg"
-import mkqm from "../../../logo kafedras/MKQM.jpg"
-import ms from "../../../logo kafedras/MS.jpg"
-import tmj from "../../../logo kafedras/TMJ.jpg"
-import jmk from "../../../logo kafedras/JMK.jpg"
-import iqsod from "../../../logo kafedras/IQSOD.jpg"
-import mt from "../../../logo kafedras/MT.jpg"
-import menjment from "../../../logo kafedras/MENEJMENT.jpg"
-import hfx from "../../../logo kafedras/HFX.jpg"
-import utfk from "../../../logo kafedras/UTFK.jpg"
-import energ from "../../../logo kafedras/ENERGETIKA.jpg"
-import ijtimoiy from "../../../logo kafedras/IJTIMOIY.jpg"
-import tarnsport from "../../../logo kafedras/TRANSPORT.jpg"
-import ym from "../../../logo kafedras/YM.jpg"
-import qmb from "../../../logo kafedras/QMB.jpg"
-import ktk from "../../../logo kafedras/KTK.jpg"
 import { getKafedra } from '../../hooks/GetKafedraData'
 import { url } from '../../api/axios'
+import Spinner from '../../components/spinner/Spinner'
 
 const Home = () => {
-    const { data } = getKafedra()
+    const { data, isLoading } = getKafedra()
     console.log(data);
     return (
         <div>
+            {isLoading && <Spinner />}
             <Header />
             <ApexChart />
             <div id='kafedralar'>
